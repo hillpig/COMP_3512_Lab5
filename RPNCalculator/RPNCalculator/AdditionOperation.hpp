@@ -1,15 +1,17 @@
 #pragma once
 #include "AbstractOperation.hpp"
 
-class AdditionOperation : AbstractOperation {
+class AdditionOperation : public AbstractOperation {
 
+
+
+public:
 	static const char OPERATION_CODE{ '+' };
 
-	AdditionOperation() : AbstractOperation(OPERATION_CODE) {}
+	AdditionOperation() : AbstractOperation(OPERATION_CODE) {};
 
-	virtual int perform(int a, int b) override { return a + b; }
+	virtual int perform(int a, int b) const override { return a + b; };
 
-	virtual ~AdditionOperation() = 0;
+	virtual inline ~AdditionOperation() {};
 };
 
-inline AdditionOperation::~AdditionOperation() {}

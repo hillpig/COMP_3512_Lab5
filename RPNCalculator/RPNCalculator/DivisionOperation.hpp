@@ -1,15 +1,17 @@
 #pragma once
 #include "AbstractOperation.hpp"
 
-class DivisionOperation : AbstractOperation {
+class DivisionOperation : public AbstractOperation {
 
+
+
+public:
 	static const char OPERATION_CODE{ '/' };
 
 	DivisionOperation() : AbstractOperation(OPERATION_CODE) {}
 
-	virtual int perform(int a, int b) override { return a / b; }
+	virtual int perform(int a, int b) const override { return a / b; }
 
-	virtual ~DivisionOperation() = 0;
+	virtual inline ~DivisionOperation() {};
 };
 
-inline DivisionOperation::~DivisionOperation() {}

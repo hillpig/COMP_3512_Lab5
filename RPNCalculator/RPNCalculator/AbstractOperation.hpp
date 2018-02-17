@@ -1,16 +1,13 @@
 #pragma once
 #include "Operation.hpp"
 
-class AbstractOperation : Operation {
+class AbstractOperation : public Operation {
 
 private:
 	char operation_type;
 
 public:
-	AbstractOperation() = default;
-	AbstractOperation(char c) { operation_type = c; }
-	char get_code() const { return operation_type; }
-	virtual ~AbstractOperation() = 0;
+	AbstractOperation(char c) : operation_type{ c } {  };
+	virtual char get_code() const override { return operation_type; };
+	virtual inline ~AbstractOperation() {};
 };
-
-inline AbstractOperation::~AbstractOperation() {}
