@@ -1,7 +1,9 @@
 #pragma once
+#include "AbstractOperation.hpp"
 
-
-class SubtractOperation {
+class SubtractOperation : AbstractOperation {
 
 	static const char OPERATION_CODE{ '-' };
+
+	SubtractOperation() : AbstractOperation(OPERATION_CODE) {}
 };
