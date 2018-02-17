@@ -44,4 +44,8 @@ private:
 		result = op->perform(a, b);
 		ints.push(result);
 	}
+
+	int process_form(std::string formular) {
+	
+	}
 };
