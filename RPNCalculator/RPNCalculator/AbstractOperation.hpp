@@ -1,7 +1,7 @@
 #pragma once
+#include "Operation.hpp"
 
-
-class AbstractOperation {
+class AbstractOperation : Operation {
 
 private:
 	char operation_type;
