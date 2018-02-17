@@ -18,10 +18,8 @@
     <ClInclude Include="Operation.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Operation.cpp">
+    <ClInclude Include="AbstractOperation.hpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
 </Project>

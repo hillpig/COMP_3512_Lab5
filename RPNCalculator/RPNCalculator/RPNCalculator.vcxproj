@@ -115,10 +115,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractOperation.hpp" />
     <ClInclude Include="Operation.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Operation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
