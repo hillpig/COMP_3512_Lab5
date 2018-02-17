@@ -8,4 +8,8 @@ class MultiplicationOperation : AbstractOperation {
 	MultiplicationOperation() : AbstractOperation(OPERATION_CODE) {}
 
 	virtual int perform(int a, int b) override { return a * b; }
+
+	virtual ~MultiplicationOperation() = 0;
 };
+
+inline MultiplicationOperation::~MultiplicationOperation() {}

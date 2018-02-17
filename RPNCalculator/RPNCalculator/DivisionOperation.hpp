@@ -8,4 +8,8 @@ class DivisionOperation : AbstractOperation {
 	DivisionOperation() : AbstractOperation(OPERATION_CODE) {}
 
 	virtual int perform(int a, int b) override { return a / b; }
+
+	virtual ~DivisionOperation() = 0;
 };
+
+inline DivisionOperation::~DivisionOperation() {}

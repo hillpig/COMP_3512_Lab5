@@ -8,4 +8,8 @@ class SubtractOperation : AbstractOperation {
 	SubtractOperation() : AbstractOperation(OPERATION_CODE) {}
 
 	virtual int perform(int a, int b) override { return a - b; }
+
+	virtual ~SubtractOperation() = 0;
 };
+
+inline SubtractOperation::SubtractOperation() {}
