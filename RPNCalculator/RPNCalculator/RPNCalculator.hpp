@@ -71,6 +71,6 @@ public:
 			}
 		}
 
-		return ints.top;
+		return result;
 	}
 };
