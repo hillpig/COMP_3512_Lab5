@@ -38,14 +38,15 @@ private:
 
 
 	void perform(Operation* op) {
-		int a{ ints.top };
+		int a = ints.top;
 		ints.pop;
-		int b{ ints.top };
+		int b = ints.top;
 		ints.pop;
 		result = op->perform(a, b);
 		ints.push(result);
 	}
 
+public:
 	int process_form(std::string formular) {
 		std::istringstream iss(formular);
 		std::istringstream iss2;
