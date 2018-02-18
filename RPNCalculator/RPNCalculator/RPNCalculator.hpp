@@ -5,9 +5,10 @@
 #include "DivisionOperation.hpp"
 #include <iostream>
 #include <stack> 
+#include <sstream>
 
 
-
+using namespace std;
 
 class RPNCalculator {
 
@@ -46,6 +47,29 @@ private:
 	}
 
 	int process_form(std::string formular) {
-	
+		std::istringstream iss(formular);
+		std::istringstream iss2;
+		char c;
+		int num;
+		string second;
+		while (iss.get(c)) {
+			if ((isdigit(c)) || isblank(c)) {
+				second += c;
+			}
+			else {
+			
+				second += c;
+				iss2.str(second);
+				while (iss2 >> num) {
+				
+					ints.push(num);
+				}
+				perform(operation_type(c));
+				iss2.clear();
+				second.clear();
+			}
+		}
+
+		return ints.top;
 	}
 };
