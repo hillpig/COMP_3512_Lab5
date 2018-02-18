@@ -38,10 +38,10 @@ private:
 
 
 	void perform(Operation* op) {
-		int a = ints.top;
-		ints.pop;
-		int b = ints.top;
-		ints.pop;
+		int a = ints.top();
+		ints.pop();
+		int b = ints.top();
+		ints.pop();
 		result = op->perform(a, b);
 		ints.push(result);
 	}
