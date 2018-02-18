@@ -59,7 +59,7 @@ public:
 			}
 			else {
 			
-				second += c;
+//				second += c;
 				iss2.str(second);
 				while (iss2 >> num) {
 				
